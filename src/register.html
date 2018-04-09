@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
    <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+ 
 </head>
 
 <body>
   <div class="container">
     <h1 class=" text-center">User Register</h1>
+    <h6 id="time" class=" text-right"></h6>
     <form>
 
 
@@ -105,5 +108,15 @@
     
   </div>
 </body>
-
+<script>
+  let displayTime= document.querySelector("#time");
+  console.log(displayTime);
+  let time = () => {
+    let getData = moment().format(" MMMM Do YYYY, h:mm:ss a");
+    displayTime.innerHTML=getData;
+   
+  };
+  
+  setInterval(time, 1000);
+</script>
 </html>

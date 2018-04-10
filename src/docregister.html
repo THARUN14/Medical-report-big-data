@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+   <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+ 
+</head>
+
+<body>
+  <div class="container">
+    <h1 class=" text-center">Doctor Register</h1>
+    <h6 id="time" class=" text-right"></h6>
+    <form>
+
+
+      <label for="Username">Username</label>
+      <input class="u-full-width" type="text" placeholder="Username" id="Username">
+      <label for="gender">Gender</label>
+      <select class="u-full-width" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+
+      </select>
+      <label for="dob">Date of Birth</label>
+      <input class="u-full-width form" type="date" placeholder="Date Of Birth" id="dob">
+      <label for="Email">Email</label>
+      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="Email">
+    
+
+      <label for="Username">Password</label>
+      <input class="u-full-width" type="password" placeholder="Password" id="Password">
+
+      
+      
+      <label for="Hospital_Name">Hospital Name</label>
+      <input class="u-full-width" type="text" placeholder="Hospital Name" id="Hospital_Name">
+      <label for="Hospital_Address">Hospital Address</label>
+      <textarea class="u-full-width" name="Hospital_Address" id="Hospital_Address" placeholder="Hospital Address"></textarea>
+      <label for="phone_number">Phone Number</label>
+      <input class="u-full-width" type="number" placeholder="Phone number" id="phone_number">
+
+      <label for="exampleEmailInput">&nbsp;</label>
+      <input class="button-primary" type="submit" >
+
+
+    </form>
+    
+  </div>
+</body>
+<script>
+  let displayTime= document.querySelector("#time");
+  console.log(displayTime);
+  let time = () => {
+    let getData = moment().format(" MMMM Do YYYY, h:mm:ss a");
+    displayTime.innerHTML=getData;
+   
+  };
+  
+  setInterval(time, 1000);
+</script>
+</html>

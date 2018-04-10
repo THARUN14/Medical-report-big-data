@@ -12,17 +12,38 @@
 </head>
 <body>
     <div class="container">
-      <h1 class=" text-center">View Details</h1>
-      <h6 id="time" class=" text-right"></h6>
+      <h1 class=" text-center">Upload </h1>
+      <h6 id="time" class="time text-right"></h6>
         <form>
           
             
               <label for="userid">UserID</label>
               <input class="u-full-width" type="text" placeholder="UserID" id="userid">
-            
+              <label class="text-blue" for="affectedby">Affected By :</label>
+              <div class="row">
+                <div class="four columns">
+                  <label for="disease">Disease</label>
+                  <input class="u-full-width" type="text" placeholder="Disease" id="disease">
+                </div>
+                <div class="four columns">
+                  <label for="value">Value</label>
+                  <input class="u-full-width" type="text" placeholder="Value" id="value">
+                </div>
+                <div class="four columns">
+                  <label for="level">Level</label>
+                  <select class="u-full-width" id="level">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+
+                </div>
+                <label for="Comment">Comment</label>
+      <textarea class="u-full-width" name="Comment" id="Comment" placeholder="Comment"></textarea>
+              </div>
               <div class="text-center">
               <input class="button-primary" type="submit" value="optimistic view">
-              <input class="button-secondary" type="submit" value="detailed view">
+             
             </div>
          
         </form>

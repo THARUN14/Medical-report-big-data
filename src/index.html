@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor Login</title>
+    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <h1 class=" text-center">View Details</h1>
+      <h6 id="time" class=" text-right"></h6>
+        <form>
+          
+            
+              <label for="userid">UserID</label>
+              <input class="u-full-width" type="text" placeholder="UserID" id="userid">
+            
+              <div class="text-center">
+              <input class="button-primary" type="submit" value="optimistic view">
+              <input class="button-secondary" type="submit" value="detailed view">
+            </div>
+         
+        </form>
+    </div> 
+</body>
+<script>
+    let displayTime= document.querySelector("#time");
+    
+    let time = () => {
+      let getData = moment().format(" MMMM Do YYYY, h:mm:ss a");
+      displayTime.innerHTML=getData;
+     
+    };
+    
+    setInterval(time, 1000);
+  </script>
+</html>

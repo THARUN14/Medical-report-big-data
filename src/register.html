@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <h1 class=" text-center">User Register</h1>
-    <h6 id="time" class=" text-right"></h6>
+    <h6 id="time" class="time text-right"></h6>
     <form>
 
 
@@ -110,7 +110,7 @@
 </body>
 <script>
   let displayTime= document.querySelector("#time");
-  console.log(displayTime);
+  
   let time = () => {
     let getData = moment().format(" MMMM Do YYYY, h:mm:ss a");
     displayTime.innerHTML=getData;

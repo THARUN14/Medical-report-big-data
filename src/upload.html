@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor Login</title>
+    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+   <link rel="stylesheet" href="css/main.css">
+   <script src="https://cdn.jsdelivr.net/npm/moment@2.22.0/moment.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <h1 class=" text-center">Upload </h1>
+      <h6 id="time" class="time text-right"></h6>
+        <form>
+          
+            
+              <label for="userid">UserID</label>
+              <input class="u-full-width" type="text" placeholder="UserID" id="userid">
+              <label class="text-blue" for="affectedby">Affected By :</label>
+              <div class="row">
+                <div class="four columns">
+                  <label for="disease">Disease</label>
+                  <input class="u-full-width" type="text" placeholder="Disease" id="disease">
+                </div>
+                <div class="four columns">
+                  <label for="value">Value</label>
+                  <input class="u-full-width" type="text" placeholder="Value" id="value">
+                </div>
+                <div class="four columns">
+                  <label for="level">Level</label>
+                  <select class="u-full-width" id="level">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+
+                </div>
+                <label for="Comment">Comment</label>
+      <textarea class="u-full-width" name="Comment" id="Comment" placeholder="Comment"></textarea>
+              </div>
+              <div class="text-center">
+              <input class="button-primary" type="submit" value="optimistic view">
+             
+            </div>
+         
+        </form>
+    </div> 
+</body>
+<script>
+    let displayTime= document.querySelector("#time");
+    
+    let time = () => {
+      let getData = moment().format(" MMMM Do YYYY, h:mm:ss a");
+      displayTime.innerHTML=getData;
+     
+    };
+    
+    setInterval(time, 1000);
+  </script>
+</html>

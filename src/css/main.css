@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 .text-center{
     text-align: center;
 }
@@ -13,4 +14,14 @@
 .text-right{
     text-align: right;
     font-weight: 700;
+}
+.time{
+    color: rgb(25, 160, 126);
+}
+body{
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text-blue{
+    color: rgb(199, 58, 93);
 }

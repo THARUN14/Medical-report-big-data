@@ -10,3 +10,7 @@
     box-shadow: none;
     box-sizing: border-box;
 }
+.text-right{
+    text-align: right;
+    font-weight: 700;
+}
